@@ -1,4 +1,4 @@
-﻿namespace Oocx.ACME.IIS
+﻿namespace Oocx.ACME.Xsp
 {
 	using System;
 	using System.Collections.Generic;
@@ -16,12 +16,12 @@
 
 	// This project can output the Class library as a NuGet Package.
 	// To enable this option, right-click on the project and select the Properties menu item. In the Build tab select "Produce outputs on build".
-	public class IISChallengeProvider : IChallengeProvider
+	public class XspChallengeProvider : IChallengeProvider
 	{
 		private readonly IAcmeClient client;
 		private readonly ServerManager manager;
 
-		public IISChallengeProvider(IAcmeClient client)
+		public XspChallengeProvider(IAcmeClient client)
 		{
 			this.client = client;
 			manager = new ServerManager();
@@ -120,7 +120,7 @@
 				return;
 			}
 
-			Type iisChallengeProviderType = typeof(IISChallengeProvider);
+			Type iisChallengeProviderType = typeof(XspChallengeProvider);
 			string resourceName = iisChallengeProviderType.ToString().Substring(0, iisChallengeProviderType.ToString().LastIndexOf(".", StringComparison.Ordinal)) + ".web.config";
 			Verbose($"Creating file '{webConfigPath}' from internal resource '{resourceName}'");
 

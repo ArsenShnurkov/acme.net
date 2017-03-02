@@ -1,22 +1,22 @@
-using System;
-using System.Collections.Generic;
-using System.IO;
-using System.Linq;
-using System.Net;
-using System.Security.Cryptography;
-using System.Security.Cryptography.X509Certificates;
-using System.Text;
-using Microsoft.Web.Administration;
-using Oocx.ACME.Services;
-using static Oocx.ACME.Common.Log;
-
-namespace Oocx.ACME.IIS
+namespace Oocx.ACME.Xsp
 {
-	public class IISServerConfigurationProvider : IServerConfigurationProvider
+	using System;
+	using System.Collections.Generic;
+	using System.IO;
+	using System.Linq;
+	using System.Net;
+	using System.Security.Cryptography;
+	using System.Security.Cryptography.X509Certificates;
+	using System.Text;
+	using Microsoft.Web.Administration;
+	using Oocx.ACME.Services;
+	using static Oocx.ACME.Common.Log;
+
+	public class XspServerConfigurationProvider : IServerConfigurationProvider
 	{
 		private readonly ServerManager manager;
 
-		public IISServerConfigurationProvider()
+		public XspServerConfigurationProvider()
 		{
 			manager = new ServerManager();
 		}

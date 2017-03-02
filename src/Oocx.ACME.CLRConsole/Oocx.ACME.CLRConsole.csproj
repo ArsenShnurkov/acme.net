@@ -14,9 +14,10 @@
     <TargetFrameworkProfile />
     <NuGetPackageImportStamp>
     </NuGetPackageImportStamp>
+    <TargetFrameworkVersion>v4.6</TargetFrameworkVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
+    <PlatformTarget>anycpu</PlatformTarget>
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
@@ -24,6 +25,7 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <Commandlineparameters>--domain configuration.ru:www.configuration.ru -c manual-http-01 --server https://acme-staging.api.letsencrypt.org --verbosity Verbose -a</Commandlineparameters>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -42,37 +44,15 @@
       <HintPath>..\..\packages\Autofac.3.5.2\lib\net40\Autofac.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="CommandLine">
-      <HintPath>..\..\packages\CommandLineParser.2.0.275-beta\lib\net45\CommandLine.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
-    <Reference Include="Newtonsoft.Json, Version=8.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\Newtonsoft.Json.8.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
-    <Reference Include="Oocx.ACME.Console">
-      <HintPath>..\..\artifacts\bin\Oocx.ACME.Console\Debug\net46\Oocx.ACME.Console.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
-    <Reference Include="Oocx.ACME.IIS, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\artifacts\bin\Oocx.ACME.IIS\Debug\net46\Oocx.ACME.IIS.dll</HintPath>
-    </Reference>
-    <Reference Include="Oocx.Asn1PKCS">
-      <HintPath>..\..\artifacts\bin\Oocx.Asn1PKCS\Debug\net46\Oocx.Asn1PKCS.dll</HintPath>
-    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
-    <Reference Include="System.Net.Http.Formatting, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\Microsoft.AspNet.WebApi.Client.5.2.3\lib\net45\System.Net.Http.Formatting.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Data" />
     <Reference Include="System.Net.Http" />
     <Reference Include="System.Xml" />
+    <Reference Include="System.Net.Http.Formatting" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Program.cs" />
@@ -93,6 +73,22 @@
     <ProjectReference Include="..\Oocx.ACME\Oocx.ACME.csproj">
       <Project>{AE526AAF-CECB-4244-A202-1CE255DFCEF1}</Project>
       <Name>Oocx.ACME</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Microsoft.Web.Administration.git\Microsoft.Web.Administration\Microsoft.Web.Administration.csproj">
+      <Project>{BD24AFDA-292F-4F41-BA80-C48F21D4D9F2}</Project>
+      <Name>Microsoft.Web.Administration</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Oocx.Asn1PKCS\Oocx.Asn1PKCS.csproj">
+      <Project>{8A2689EC-96FD-4A7D-A910-61081174A594}</Project>
+      <Name>Oocx.Asn1PKCS</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Oocx.ACME.Console\Oocx.ACME.Console.csproj">
+      <Project>{CEBF984C-5D04-4B9F-9037-FAD73A8DB0E1}</Project>
+      <Name>Oocx.ACME.Console</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\commandline.git\src\CommandLine\CommandLine.csproj">
+      <Project>{E1BD3C65-49C3-49E7-BABA-C60980CB3F20}</Project>
+      <Name>CommandLine</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

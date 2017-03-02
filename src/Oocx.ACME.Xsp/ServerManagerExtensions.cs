@@ -1,9 +1,9 @@
-using System;
-using System.Linq;
-using Microsoft.Web.Administration;
-
-namespace Oocx.ACME.IIS
+namespace Oocx.ACME.Xsp
 {
+	using System;
+	using System.Linq;
+	using Microsoft.Web.Administration;
+
 	public static class ServerManagerExtensions
 	{
 		public static Site GetSiteForDomain(this ServerManager manager, string domain)

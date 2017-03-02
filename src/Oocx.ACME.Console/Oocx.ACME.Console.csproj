@@ -7,7 +7,7 @@
     <OutputType>Library</OutputType>
     <RootNamespace>Oocx.ACME.Console</RootNamespace>
     <AssemblyName>Oocx.ACME.Console</AssemblyName>
-    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.6</TargetFrameworkVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -40,6 +40,12 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Net" />
+    <Reference Include="Autofac, Version=3.0.0.0, Culture=neutral, PublicKeyToken=0738eb9f132ed756">
+      <Package>autofac-3.5.2</Package>
+    </Reference>
+    <Reference Include="CommandLine">
+      <HintPath>..\..\packages\CommandLineParser.2.0.275-beta\lib\net45\CommandLine.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Oocx.Asn1PKCS\Oocx.Asn1PKCS.csproj">
@@ -53,6 +59,18 @@
     <ProjectReference Include="..\Oocx.ACME\Oocx.ACME.csproj">
       <Project>{AE526AAF-CECB-4244-A202-1CE255DFCEF1}</Project>
       <Name>Oocx.ACME</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Microsoft.Web.Administration.git\Microsoft.Web.Administration\Microsoft.Web.Administration.csproj">
+      <Project>{BD24AFDA-292F-4F41-BA80-C48F21D4D9F2}</Project>
+      <Name>Microsoft.Web.Administration</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Oocx.ACME.IIS\Oocx.ACME.IIS.csproj">
+      <Project>{471D797F-4454-4A39-824E-35F448C00522}</Project>
+      <Name>Oocx.ACME.IIS</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Oocx.ACME.Xsp\Oocx.ACME.Xsp.csproj">
+      <Project>{0545BC88-A210-485D-94EC-38A29796D037}</Project>
+      <Name>Oocx.ACME.Xsp</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />

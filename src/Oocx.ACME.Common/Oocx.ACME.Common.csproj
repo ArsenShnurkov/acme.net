@@ -7,7 +7,7 @@
     <OutputType>Library</OutputType>
     <RootNamespace>Oocx.ACME.Common</RootNamespace>
     <AssemblyName>Oocx.ACME.Common</AssemblyName>
-    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.6</TargetFrameworkVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>

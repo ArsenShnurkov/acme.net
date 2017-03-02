@@ -7,7 +7,7 @@
     <OutputType>Library</OutputType>
     <RootNamespace>Oocx.Asn1PKCS</RootNamespace>
     <AssemblyName>Oocx.Asn1PKCS</AssemblyName>
-    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.6</TargetFrameworkVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
