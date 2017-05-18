@@ -25,7 +25,7 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
-    <Commandlineparameters>--domain configuration.ru:www.configuration.ru -c manual-http-01 --server https://acme-staging.api.letsencrypt.org --verbosity Verbose -a</Commandlineparameters>
+    <Commandlineparameters>--domain configuration.ru:www.configuration.ru -c xsp-http-01 --server https://acme-staging.api.letsencrypt.org --verbosity Verbose -a</Commandlineparameters>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>

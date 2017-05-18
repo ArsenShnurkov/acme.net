@@ -50,7 +50,7 @@
 
 			return new PendingChallenge()
 			{
-				Instructions = $"using IIS integration to complete the challenge.",
+				Instructions = $"using Xsp integration to complete the challenge.",
 				Complete = () => client.CompleteChallengeAsync(challenge)
 			};
 		}
@@ -63,19 +63,19 @@
 
 		public async Task AcceptChallengeForDomainAsync(string domain, string token, string challengeJson)
 		{
-			Info($"IISChallengeService is accepting challenge with token {token} for domain {domain}");
-			var root = GetIisRoot(domain);
+			Info($"XspChallengeService is accepting challenge with token {token} for domain {domain}");
+			var root = GetXspRoot(domain);
 			await CreateWellKnownDirectoryWithChallengeFileAsync(root, token, challengeJson);
 		}
 
 		public async Task AcceptChallengeForSiteAsync(string siteName, string token, string challengeJson)
 		{
-			Info($"IISChallengeService is accepting challenge with token {token} for IIS web site '{siteName}'");
+			Info($"XspChallengeService is accepting challenge with token {token} for Xsp web site '{siteName}'");
 			SiteCollection sc = manager.Sites;
 			Site site = (Site)sc[siteName];
 			if (site == null)
 			{
-				Error($"IIS web site '{siteName}' not found, cannot process challenge.");
+				Error($"Xsp web site '{siteName}' not found, cannot process challenge.");
 				return;
 			}
 
@@ -85,7 +85,7 @@
 			await CreateWellKnownDirectoryWithChallengeFileAsync(root, token, challengeJson);
 		}
 
-		private string GetIisRoot(string domain)
+		private string GetXspRoot(string domain)
 		{
 			Site site = manager.GetSiteForDomain(domain);
 			Application app = site.Applications["/"];

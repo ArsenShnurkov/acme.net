@@ -8,7 +8,9 @@ namespace Oocx.ACME.Xsp
 	{
 		public static Site GetSiteForDomain(this ServerManager manager, string domain)
 		{
-			return manager.Sites.SingleOrDefault(s => s.Bindings.Any(b => string.Equals(domain, b.Host, StringComparison.OrdinalIgnoreCase)));
+			var sites = manager.Sites;
+			var res = sites.SingleOrDefault(s => s.Bindings.Any(b => string.Equals(domain, b.Host, StringComparison.OrdinalIgnoreCase)));
+			return res;
 		}
 	}
 }

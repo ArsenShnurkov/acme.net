@@ -59,7 +59,7 @@ namespace Oocx.ACME.Console
 
                 SaveCertificateWithPrivateKey(domain, keyPair, certificatePath);
                 
-                ConfigureServer(domain, certificatePath, keyPair, options.IISWebSite, options.IISBinding);                
+                ConfigureServer(domain, certificatePath, keyPair, options.IISWebSite, options.IpBinding);                
             }
         }
 
