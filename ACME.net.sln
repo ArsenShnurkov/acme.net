@@ -21,13 +21,13 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Oocx.Asn1PKCS", "src\Oocx.A
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Oocx.ACME.Console", "src\Oocx.ACME.Console\Oocx.ACME.Console.csproj", "{CEBF984C-5D04-4B9F-9037-FAD73A8DB0E1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Microsoft.Web.Administration", "..\Microsoft.Web.Administration.git\Microsoft.Web.Administration\Microsoft.Web.Administration.csproj", "{BD24AFDA-292F-4F41-BA80-C48F21D4D9F2}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CommandLine", "..\commandline.git\src\CommandLine\CommandLine.csproj", "{E1BD3C65-49C3-49E7-BABA-C60980CB3F20}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Microsoft.Web.Administration", "..\..\Microsoft.Web.Administration\ArsenShnurkov\Microsoft.Web.Administration\Microsoft.Web.Administration.csproj", "{BD24AFDA-292F-4F41-BA80-C48F21D4D9F2}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Oocx.ACME.IIS", "src\Oocx.ACME.IIS\Oocx.ACME.IIS.csproj", "{471D797F-4454-4A39-824E-35F448C00522}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Oocx.ACME.Xsp", "src\Oocx.ACME.Xsp\Oocx.ACME.Xsp.csproj", "{0545BC88-A210-485D-94EC-38A29796D037}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Oocx.ACME.ApacheModmono", "src\Oocx.ACME.Xsp\Oocx.ACME.ApacheModmono.csproj", "{0545BC88-A210-485D-94EC-38A29796D037}"
+EndProject
+Project("{9344BDBB-3E7F-41FC-A0DD-8665D75EE146}") = "CommandLine", "..\..\commandline\ArsenShnurkov\src\CommandLine\CommandLine.csproj", "{713B0B50-2E8C-4E26-AC95-EE91D3E2D3BB}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -59,10 +59,6 @@ Global
 		{BD24AFDA-292F-4F41-BA80-C48F21D4D9F2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BD24AFDA-292F-4F41-BA80-C48F21D4D9F2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BD24AFDA-292F-4F41-BA80-C48F21D4D9F2}.Release|Any CPU.Build.0 = Release|Any CPU
-		{E1BD3C65-49C3-49E7-BABA-C60980CB3F20}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{E1BD3C65-49C3-49E7-BABA-C60980CB3F20}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{E1BD3C65-49C3-49E7-BABA-C60980CB3F20}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{E1BD3C65-49C3-49E7-BABA-C60980CB3F20}.Release|Any CPU.Build.0 = Release|Any CPU
 		{471D797F-4454-4A39-824E-35F448C00522}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{471D797F-4454-4A39-824E-35F448C00522}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{471D797F-4454-4A39-824E-35F448C00522}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -71,6 +67,10 @@ Global
 		{0545BC88-A210-485D-94EC-38A29796D037}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0545BC88-A210-485D-94EC-38A29796D037}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0545BC88-A210-485D-94EC-38A29796D037}.Release|Any CPU.Build.0 = Release|Any CPU
+		{713B0B50-2E8C-4E26-AC95-EE91D3E2D3BB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{713B0B50-2E8C-4E26-AC95-EE91D3E2D3BB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{713B0B50-2E8C-4E26-AC95-EE91D3E2D3BB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{713B0B50-2E8C-4E26-AC95-EE91D3E2D3BB}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -81,8 +81,8 @@ Global
 		{624AAC5A-A6AC-458C-9EFF-58D17BCAA456} = {900B7B61-41A1-4393-BD71-50DBCF252292}
 		{8A2689EC-96FD-4A7D-A910-61081174A594} = {900B7B61-41A1-4393-BD71-50DBCF252292}
 		{CEBF984C-5D04-4B9F-9037-FAD73A8DB0E1} = {900B7B61-41A1-4393-BD71-50DBCF252292}
-		{E1BD3C65-49C3-49E7-BABA-C60980CB3F20} = {900B7B61-41A1-4393-BD71-50DBCF252292}
 		{471D797F-4454-4A39-824E-35F448C00522} = {900B7B61-41A1-4393-BD71-50DBCF252292}
 		{0545BC88-A210-485D-94EC-38A29796D037} = {900B7B61-41A1-4393-BD71-50DBCF252292}
+		{713B0B50-2E8C-4E26-AC95-EE91D3E2D3BB} = {900B7B61-41A1-4393-BD71-50DBCF252292}
 	EndGlobalSection
 EndGlobal

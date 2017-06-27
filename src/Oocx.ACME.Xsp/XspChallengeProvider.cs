@@ -120,11 +120,11 @@
 				return;
 			}
 
-			Type iisChallengeProviderType = typeof(XspChallengeProvider);
-			string resourceName = iisChallengeProviderType.ToString().Substring(0, iisChallengeProviderType.ToString().LastIndexOf(".", StringComparison.Ordinal)) + ".web.config";
+			Type сhallengeProviderType = typeof(XspChallengeProvider);
+			string resourceName = сhallengeProviderType.ToString().Substring(0, сhallengeProviderType.ToString().LastIndexOf(".", StringComparison.Ordinal)) + ".web.config";
 			Verbose($"Creating file '{webConfigPath}' from internal resource '{resourceName}'");
 
-			var webConfigStream = iisChallengeProviderType.GetTypeInfo().Assembly.GetManifestResourceStream(resourceName);
+			var webConfigStream = сhallengeProviderType.GetTypeInfo().Assembly.GetManifestResourceStream(resourceName);
 			using (var fileStream = new FileStream(webConfigPath, FileMode.CreateNew, FileAccess.Write))
 			{
 				webConfigStream.CopyTo(fileStream);

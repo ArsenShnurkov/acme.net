@@ -40,12 +40,10 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Net" />
-    <Reference Include="Autofac, Version=3.0.0.0, Culture=neutral, PublicKeyToken=0738eb9f132ed756">
-      <Package>autofac-3.5.2</Package>
-    </Reference>
     <Reference Include="CommandLine">
       <HintPath>..\..\packages\CommandLineParser.2.0.275-beta\lib\net45\CommandLine.dll</HintPath>
     </Reference>
+    <Reference Include="Autofac" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Oocx.Asn1PKCS\Oocx.Asn1PKCS.csproj">
@@ -70,7 +68,7 @@
     </ProjectReference>
     <ProjectReference Include="..\Oocx.ACME.Xsp\Oocx.ACME.Xsp.csproj">
       <Project>{0545BC88-A210-485D-94EC-38A29796D037}</Project>
-      <Name>Oocx.ACME.Xsp</Name>
+      <Name>Oocx.ACME.ApacheModmono</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
