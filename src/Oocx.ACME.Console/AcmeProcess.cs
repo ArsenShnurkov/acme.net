@@ -110,7 +110,7 @@ namespace Oocx.ACME.Console
         {
             System.Console.CursorVisible = false;
 
-            while (string.IsNullOrWhiteSpace(options.PfxPassword))
+            while (null == options.PfxPassword)
             {
                 System.Console.Write("Enter password for pfx file: ");
                 var color = System.Console.ForegroundColor;

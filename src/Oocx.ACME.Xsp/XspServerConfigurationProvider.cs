@@ -8,7 +8,7 @@ namespace Oocx.ACME.Xsp
 	using System.Security.Cryptography;
 	using System.Security.Cryptography.X509Certificates;
 	using System.Text;
-	using Microsoft.Web.Administration;
+	using ApacheModmono.Web.Administration;
 	using Oocx.ACME.Services;
 	using static Oocx.ACME.Common.Log;
 
@@ -140,8 +140,8 @@ namespace Oocx.ACME.Xsp
 		{
 			var bindingInformation = $"*:443:{domain}";
 			Info($"adding new binding {bindingInformation} to site {site.Name}");
-			var binding = site.Bindings.Add(bindingInformation, certificateHash, certificateStoreName);
-			binding.SetAttributeValue("sslFlags", 1);
+			/*var binding = */site.Bindings.Add(bindingInformation, certificateHash, certificateStoreName);
+			//binding.SetAttributeValue("sslFlags", 1);
 			manager.CommitChanges();
 		}
 	}

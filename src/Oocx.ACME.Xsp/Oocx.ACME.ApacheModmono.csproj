@@ -28,7 +28,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
-    <Reference Include="ApacheModmono.Web.Administration" />
+    <Reference Include="System.Data.Linq" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -45,10 +45,15 @@
       <Project>{624AAC5A-A6AC-458C-9EFF-58D17BCAA456}</Project>
       <Name>Oocx.ACME.Common</Name>
     </ProjectReference>
-    <ProjectReference Include="..\..\..\Microsoft.Web.Administration.git\Microsoft.Web.Administration\Microsoft.Web.Administration.csproj">
-      <Project>{BD24AFDA-292F-4F41-BA80-C48F21D4D9F2}</Project>
-      <Name>Microsoft.Web.Administration</Name>
+    <ProjectReference Include="..\..\..\..\ApacheModmono.Web.Administration\ArsenShnurkov\ApacheModmono.Web.Administration\ApacheModmono.Web.Administration.csproj">
+      <Project>{A5FA5710-E536-4923-9CC1-0ED72F0FAFB8}</Project>
+      <Name>ApacheModmono.Web.Administration</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Oocx.ACME.ApacheModmono.web.config">
+      <LogicalName>Oocx.ACME.Xsp.web.config</LogicalName>
+    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
 </Project>
