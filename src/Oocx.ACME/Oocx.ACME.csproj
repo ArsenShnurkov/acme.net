@@ -15,7 +15,7 @@
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
     <OutputPath>bin\Debug</OutputPath>
-    <DefineConstants>DEBUG;</DefineConstants>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <ConsolePause>false</ConsolePause>
@@ -40,10 +40,12 @@
     <Reference Include="System.Security.Cryptography.RSA">
       <HintPath>..\..\..\..\..\..\..\..\usr\lib64\mono\4.5\Facades\System.Security.Cryptography.RSA.dll</HintPath>
     </Reference>
-    <Reference Include="FSharp.Core">
-      <HintPath>..\..\..\..\..\..\..\..\root\.nuget\packages\FSharp.Compiler.Tools\4.0.0.1\tools\FSharp.Core.dll</HintPath>
-    </Reference>
     <Reference Include="System.Net.Http.Formatting" />
+    <Reference Include="Newtonsoft.Json, Version=6.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed">
+      <Package>monodevelop</Package>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.Extensions" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />

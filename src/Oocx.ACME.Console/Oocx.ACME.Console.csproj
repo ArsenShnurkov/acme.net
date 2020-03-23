@@ -43,7 +43,9 @@
     <Reference Include="CommandLine">
       <HintPath>..\..\packages\CommandLineParser.2.0.275-beta\lib\net45\CommandLine.dll</HintPath>
     </Reference>
-    <Reference Include="Autofac" />
+    <Reference Include="Autofac">
+      <Package>dev-dotnet-autofac-2</Package>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Oocx.Asn1PKCS\Oocx.Asn1PKCS.csproj">

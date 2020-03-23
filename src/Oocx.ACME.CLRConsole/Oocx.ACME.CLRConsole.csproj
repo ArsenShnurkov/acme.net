@@ -25,7 +25,7 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
-    <Commandlineparameters>--server https://acme-v01.api.letsencrypt.org -c xsp-http-01  --domain xmpp.bbs.io -p "" --acceptTermsOfService --acceptInstructions --verbosity Verbose</Commandlineparameters>
+    <Commandlineparameters>--server https://acme-v01.api.letsencrypt.org -c manual-http-01  --domain xn----7sbb5blj.xn-----6kcajervcdvqarhfgengcekya4c.xn--p1ai -p "" --acceptTermsOfService --termsOfServiceUri https://letsencrypt.org/documents/LE-SA-v1.2-November-15-2017.pdf   --acceptInstructions --verbosity Verbose --contact admin@xn----7sbb5blj.xn-----6kcajervcdvqarhfgengcekya4c.xn--p1ai</Commandlineparameters>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
